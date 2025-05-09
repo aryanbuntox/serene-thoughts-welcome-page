@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -114,8 +113,7 @@ export default {
 				'fade-up': 'fade-up 0.5s ease-out'
 			},
 			fontFamily: {
-				'playfair': ['Playfair Display', 'serif'],
-				'lato': ['Lato', 'sans-serif']
+				'poppins': ['Poppins', 'sans-serif'],
 			}
 		}
 	},
