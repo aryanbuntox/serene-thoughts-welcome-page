@@ -7,6 +7,7 @@ import GallerySection from '../components/GallerySection';
 import FollowSection from '../components/FollowSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import SocialMediaSlideshow from '../components/SocialMediaSlideshow';
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <SocialMediaSlideshow />
         <AboutSection />
         <GallerySection />
         <FollowSection />
