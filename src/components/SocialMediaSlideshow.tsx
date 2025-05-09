@@ -1,11 +1,6 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Instagram, Facebook, Twitter, Linkedin, Youtube, Github } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 
 interface SocialIconProps {
@@ -30,28 +25,12 @@ const SocialMediaSlideshow = () => {
   useEffect(() => {
     if (!emblaApi) return;
     
-    let animationId: number;
-    let lastTime = Date.now();
-    
-    const autoScroll = () => {
-      const now = Date.now();
-      const deltaTime = now - lastTime;
-      
-      if (deltaTime > 20) { // Throttle to avoid too many updates
-        emblaApi.scrollNext({ loop: true });
-        lastTime = now;
-      }
-      
-      animationId = requestAnimationFrame(autoScroll);
-    };
-    
     // Start auto-scrolling with a smooth continuous effect
     const scrollTimer = setInterval(() => {
-      emblaApi.scrollBy(1);
-    }, 60); // Adjust speed as needed
+      emblaApi.scrollNext();
+    }, 30); // Faster scroll speed
     
     return () => {
-      cancelAnimationFrame(animationId);
       clearInterval(scrollTimer);
     };
   }, [emblaApi]);
