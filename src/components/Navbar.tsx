@@ -31,11 +31,11 @@ const Navbar = () => {
     <header 
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-white/95 shadow-sm backdrop-blur-sm py-3" : "bg-transparent py-5"
+        isScrolled ? "bg-gray-900/95 backdrop-blur-sm shadow-md py-3" : "bg-transparent py-5"
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="text-xl md:text-2xl font-playfair font-semibold text-serene-700">
+        <a href="#" className="text-xl md:text-2xl font-medium text-white">
           Serene of Thoughts
         </a>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-gray-800" 
+          className="md:hidden text-white" 
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
@@ -66,7 +66,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-md animate-fade-in">
           <div className="container py-4 flex flex-col gap-4">
             <MobileNavItem href="#about" onClick={toggleMobileMenu}>About</MobileNavItem>
             <MobileNavItem href="#gallery" onClick={toggleMobileMenu}>Gallery</MobileNavItem>
@@ -95,7 +95,7 @@ const NavItem = ({ href, children }: { href: string; children: React.ReactNode }
   return (
     <a 
       href={href} 
-      className="text-gray-800 hover:text-serene-600 transition-colors font-medium"
+      className="text-gray-200 hover:text-serene-400 transition-colors font-medium"
     >
       {children}
     </a>
@@ -114,7 +114,7 @@ const MobileNavItem = ({
   return (
     <a 
       href={href} 
-      className="text-gray-800 hover:text-serene-600 py-2 text-lg font-medium border-b border-gray-100"
+      className="text-gray-200 hover:text-serene-400 py-2 text-lg font-medium border-b border-gray-800"
       onClick={onClick}
     >
       {children}

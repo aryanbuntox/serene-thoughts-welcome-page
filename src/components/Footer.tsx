@@ -7,12 +7,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-950 text-white py-12">
       <div className="container">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-playfair font-medium mb-4">Serene of Thoughts</h3>
+            <h3 className="text-xl font-medium mb-4 text-white">Serene of Thoughts</h3>
             <p className="text-gray-400 mb-6">
               A peaceful journey through mindful moments and thoughtful reflections.
             </p>
@@ -28,7 +28,7 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-medium mb-4">Quick Links</h3>
+            <h3 className="text-lg font-medium mb-4 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#about" className="text-gray-400 hover:text-white transition-colors">
@@ -55,7 +55,7 @@ const Footer = () => {
           
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-medium mb-4">Join Our Newsletter</h3>
+            <h3 className="text-lg font-medium mb-4 text-white">Join Our Newsletter</h3>
             <p className="text-gray-400 mb-4">
               Subscribe to receive updates on new content and special announcements.
             </p>
@@ -63,7 +63,7 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Your email address" 
-                className="flex-grow px-4 py-2 rounded-l-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-1 focus:ring-serene-400"
+                className="flex-grow px-4 py-2 rounded-l-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-serene-400"
                 required
               />
               <button 

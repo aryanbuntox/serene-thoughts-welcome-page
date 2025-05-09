@@ -51,10 +51,10 @@ const GallerySection = () => {
   ];
 
   return (
-    <section id="gallery" className="section bg-gray-50">
+    <section id="gallery" className="section bg-gray-950">
       <div className="container">
-        <h2 className="section-title">Our Gallery</h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        <h2 className="section-title text-white">Our Gallery</h2>
+        <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12">
           A glimpse into our most popular posts, capturing moments of tranquility and thoughtful reflection from our Instagram journey.
         </p>
         
@@ -69,7 +69,7 @@ const GallerySection = () => {
             href="https://instagram.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center text-serene-700 hover:text-serene-900 font-medium"
+            className="inline-flex items-center text-serene-400 hover:text-serene-300 font-medium"
           >
             See more on Instagram
             <svg 
@@ -93,7 +93,7 @@ const GallerySection = () => {
 
 const GalleryItem = ({ item }: { item: any }) => {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
+    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
       <div className="aspect-square relative overflow-hidden">
         <img 
           src={item.image} 
@@ -102,8 +102,8 @@ const GalleryItem = ({ item }: { item: any }) => {
         />
       </div>
       <div className="p-4">
-        <p className="text-gray-700 mb-3 line-clamp-2">{item.caption}</p>
-        <div className="flex items-center text-gray-500 text-sm">
+        <p className="text-gray-300 mb-3 line-clamp-2">{item.caption}</p>
+        <div className="flex items-center text-gray-400 text-sm">
           <div className="flex items-center mr-4">
             <Heart className="h-4 w-4 mr-1 text-red-500" />
             {item.likes.toLocaleString()}

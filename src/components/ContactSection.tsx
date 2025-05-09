@@ -13,18 +13,18 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section bg-white">
+    <section id="contact" className="section bg-gray-900">
       <div className="container">
-        <h2 className="section-title">Get in Touch</h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        <h2 className="section-title text-white">Get in Touch</h2>
+        <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12">
           Have questions, collaboration ideas, or just want to say hello? We'd love to hear from you.
         </p>
         
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h3 className="subsection-title text-serene-800">Connect With Us</h3>
-            <p className="text-gray-700 mb-8">
+            <h3 className="subsection-title text-serene-300">Connect With Us</h3>
+            <p className="text-gray-300 mb-8">
               We value every message and strive to respond within 24-48 hours. Whether you're interested in collaborations, have questions about our content, or just want to share your thoughts, we're here to listen.
             </p>
             
@@ -48,53 +48,53 @@ const ContactSection = () => {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-playfair font-medium mb-4">Send us a Message</h3>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-medium mb-4 text-white">Send us a Message</h3>
             
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                   Your Name
                 </label>
                 <input 
                   type="text" 
                   id="name" 
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-serene-500"
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-serene-500"
                   required
                 />
               </div>
               
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
                   Email Address
                 </label>
                 <input 
                   type="email" 
                   id="email" 
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-serene-500"
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-serene-500"
                   required
                 />
               </div>
               
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
                   Subject
                 </label>
                 <input 
                   type="text" 
                   id="subject" 
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-serene-500"
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-serene-500"
                 />
               </div>
               
               <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                   Your Message
                 </label>
                 <textarea 
                   id="message" 
                   rows={5}
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-serene-500"
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-serene-500"
                   required
                 ></textarea>
               </div>
@@ -125,12 +125,12 @@ const ContactItem = ({
 }) => {
   return (
     <div className="flex items-start">
-      <div className="bg-serene-100 p-3 rounded-lg text-serene-700 mr-4">
+      <div className="bg-gray-800 p-3 rounded-lg text-serene-400 mr-4">
         {icon}
       </div>
       <div>
-        <h4 className="font-medium mb-1">{title}</h4>
-        <p className="text-gray-600">{content}</p>
+        <h4 className="font-medium mb-1 text-white">{title}</h4>
+        <p className="text-gray-400">{content}</p>
       </div>
     </div>
   );
