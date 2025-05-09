@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Instagram, Facebook, Twitter, Linkedin, Youtube, Github } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 
@@ -20,16 +20,21 @@ const SocialMediaSlideshow = () => {
     containScroll: 'trimSnaps',
   });
 
-  // Slow auto-scrolling
+  const animationRef = useRef<number>();
+
+  // Continuous slow scroll
   useEffect(() => {
     if (!emblaApi) return;
 
-    const scrollTimer = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 300); // Slow scroll: every 3 seconds
+    const scrollStep = () => {
+      emblaApi.scrollBy(0.1); // Scroll by 0.1 pixels for ultra-smooth movement
+      animationRef.current = requestAnimationFrame(scrollStep);
+    };
+
+    animationRef.current = requestAnimationFrame(scrollStep);
 
     return () => {
-      clearInterval(scrollTimer);
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [emblaApi]);
 
