@@ -26,7 +26,7 @@ const SocialMediaSlideshow = () => {
 
     const scrollTimer = setInterval(() => {
       emblaApi.scrollNext();
-    }, 3000); // Slow scroll: every 3 seconds
+    }, 300); // Slow scroll: every 3 seconds
 
     return () => {
       clearInterval(scrollTimer);
