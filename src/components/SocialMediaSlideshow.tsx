@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Instagram, Facebook, Twitter, Linkedin, Youtube, Github } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -20,21 +19,20 @@ const SocialMediaSlideshow = () => {
     dragFree: true,
     containScroll: 'trimSnaps',
   });
-  
-  // Auto-scrolling functionality
+
+  // Slow auto-scrolling
   useEffect(() => {
     if (!emblaApi) return;
-    
-    // Start auto-scrolling with a smooth continuous effect
+
     const scrollTimer = setInterval(() => {
       emblaApi.scrollNext();
-    }, 30); // Faster scroll speed
-    
+    }, 3000); // Slow scroll: every 3 seconds
+
     return () => {
       clearInterval(scrollTimer);
     };
   }, [emblaApi]);
-  
+
   const socialIcons = [
     { icon: <Instagram size={28} />, color: 'text-pink-500' },
     { icon: <Facebook size={28} />, color: 'text-blue-500' },
@@ -44,7 +42,6 @@ const SocialMediaSlideshow = () => {
     { icon: <Github size={28} />, color: 'text-gray-300' },
   ];
 
-  // Duplicate icons multiple times for a more continuous effect
   const multipleIcons = [...socialIcons, ...socialIcons, ...socialIcons, ...socialIcons];
 
   return (
@@ -53,10 +50,7 @@ const SocialMediaSlideshow = () => {
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
             {multipleIcons.map((item, index) => (
-              <div 
-                key={index} 
-                className="flex-none mx-6"
-              >
+              <div key={index} className="flex-none mx-6">
                 <div className="flex items-center justify-center">
                   <SocialIcon icon={item.icon} color={item.color} />
                 </div>
