@@ -1,49 +1,48 @@
-
 import React from 'react';
 import { Heart, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const GallerySection = () => {
-  // Sample gallery items
+  // Gallery items with new uploaded images
   const galleryItems = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=600&q=80",
+      image: "/lovable-uploads/7a1b7cab-e3e8-4459-8489-eb6b24e3508c.png",
       caption: "Find peace in the stillness of night. The stars remind us how vast our possibilities are.",
       likes: 1243,
       comments: 89
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=600&q=80",
+      image: "/lovable-uploads/cce4da85-0f61-4138-bdf2-73dc915a9374.png",
       caption: "Let the light guide you through the darkest forests. There's always a path forward.",
       likes: 956,
       comments: 42
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80",
+      image: "/lovable-uploads/de438354-c6c3-4ded-bd9e-84f86e91d224.png",
       caption: "The strength of nature teaches us resilience. Stand tall through life's storms.",
       likes: 1578,
       comments: 124
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80",
+      image: "/lovable-uploads/391dd801-e7f4-4e30-954d-a8844c4bf5b5.png",
       caption: "Sometimes the journey is unclear, but trust that clarity will come with persistence.",
       likes: 2105,
       comments: 167
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?auto=format&fit=crop&w=600&q=80",
+      image: "/lovable-uploads/756d3931-b678-4c2a-8063-a45e806dbb34.png",
       caption: "Mornings remind us that we can begin again, no matter what came before.",
       likes: 1320,
       comments: 76
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80",
+      image: "/lovable-uploads/77cdb188-d241-41cd-879d-38c93158d1aa.png",
       caption: "In the depths of the forest, we find the silence our souls have been craving.",
       likes: 1782,
       comments: 93
