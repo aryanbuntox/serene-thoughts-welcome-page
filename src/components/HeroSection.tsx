@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="container relative z-10 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-medium mb-6 animate-fade-up">
-            Serene of Thoughts
+            Serene of Thought
           </h1>
           <p className="text-xl md:text-2xl opacity-90 mb-8 animate-fade-up" style={{animationDelay: '0.2s'}}>
             A peaceful journey through mindful moments and thoughtful reflections
